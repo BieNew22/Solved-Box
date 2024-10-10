@@ -5,13 +5,15 @@ branding:
   icon: code
   color: blue
 runs:
-  runs-on: ubuntu-latest
+  using: 'composite'
   steps:
     - name: Install Python
       uses: actions/setup-python@v4
       with:
         python-version: 3.12
     - name: Install Dependencies
+      shell: bash
       run: pip install -r requirements.txt
     - name: Run
+      shell: bash
       run: python src/main.py
