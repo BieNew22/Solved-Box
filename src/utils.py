@@ -12,6 +12,8 @@ def update_gist(gist_id: str, github_token: str, content: str, user_name: str) -
         raise Exception(f'Failed to get gist: {resp.status_code} {resp.text}')
     gist = resp.json()
     file_name = list(gist['files'].keys())[0]
+
+    print(file_name)
     data = {
         'files': {
             file_name: {
