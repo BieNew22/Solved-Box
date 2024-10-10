@@ -27,7 +27,7 @@ def update_gist(gist_id: str, github_token: str, content: str, user_name: str) -
 
 def add_space(pre, length, suf):
     lenA, lenB = len(pre), len(str(suf))
-    return f'{pre}{' ' * (length - lenA - lenB)}{suf}'
+    return str(pre) + ' ' * (length - lenA - lenB) + str(suf)
 
 
 def make_graph(percent, size):
