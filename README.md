@@ -31,6 +31,7 @@ This project display user solved.ac profile
 1. Create a new **public GitHub Gist** and **get Gist ID** (https://gist.github.com/)
     * https://gist.github.com/BieNew22/e8cafc40adadb1b28963cf3bf77e9968
     * `e8cafc40adadb1b28963cf3bf77e9968` is gist id
+    * **when you make Gist only fill the content.**
 2. Create a token with the `gist` (https://github.com/settings/tokens/new)
 <p align="center">
    <img src="https://img.shields.io/badge/language-python-blue?style"/>
