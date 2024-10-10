@@ -1,0 +1,19 @@
+name: "solved-box"
+author: BieNew22
+description: "Update your Solved.ac stats"
+branding:
+  icon: code
+  color: blue
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.8'
+    - name: Install Dependencies
+      shell: bash
+      run: pip install -r requirements.txt
+    - name: Run
+      shell: bash
+      run: python src/main.py

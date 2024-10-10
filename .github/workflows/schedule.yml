@@ -1,0 +1,19 @@
+name: Update gist
+on:
+  schedule:
+    - cron: 0 21 * * *
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update gist
+        uses: NewBie22/@main
+        env:
+          USER_NAME: ${{ secrets.USER_NAME }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
