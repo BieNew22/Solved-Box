@@ -61,7 +61,7 @@ def get_user_data(id: str) -> UserProfile | None:
     res.solved = str(user_data['solvedCount']).strip()
     res.rank = user_data['rank']
     res.tier = num_to_tier(user_data['tier']).strip()
-    res.classValue = f'{user_data['class']}{CLASS_ADD[user_data['classDecoration']]}'.strip()
+    res.classValue = str(user_data['class']) + str(user_data['classDecoration'])
     res.arena = num_to_arena_tier(user_data['arenaTier'], user_data['arenaRating']).strip()
 
     res.rating = user_data['rating']
