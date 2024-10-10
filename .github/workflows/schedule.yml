@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Update gist
-        uses: NewBie22/@main
+        uses: NewBie22/Solved-Box/@main
         env:
           USER_NAME: ${{ secrets.USER_NAME }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
