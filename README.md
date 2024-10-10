@@ -1,7 +1,6 @@
 <p align="center">
-  <a href="http://lovera.maxam.now.sh/">
-    <!-- <img src="https://user-images.githubusercontent.com/25841814/79395484-5081ae80-7fac-11ea-9e27-ac91472e31dd.png" alt="screenshot" width="500"> -->
-  </a>
+    <img src="https://raw.githubusercontent.com/BieNew22/Solved-Box/refs/heads/main/img/img0.png" alt="screenshot" 
+    width="500">
   <h3 align="center">✨solved-box</h3>
 </p>
 
@@ -20,7 +19,7 @@
 ---
 
 > This project is inspired by maxam2017's productive-box<br/>
-> Find more in https://github.com/maxam2017/productive-box/
+> Details : https://github.com/maxam2017/productive-box/
 
 ## Overview
 
@@ -34,7 +33,7 @@ This project display user solved.ac profile
     * **when you make Gist only fill the content.**
 2. Create a token with the `gist` (https://github.com/settings/tokens/new)
 <p align="center">
-   <img src="https://img.shields.io/badge/language-python-blue?style"/>
+   <img src="https://raw.githubusercontent.com/BieNew22/Solved-Box/refs/heads/main/img/img1.png" width="500"/>
 </p>
 
 
@@ -52,7 +51,7 @@ This project display user solved.ac profile
 
    Below is the final screenshot
    <p align="center">
-    <img src="https://img.shields.io/badge/language-python-blue?style"/>
+    <img src="https://raw.githubusercontent.com/BieNew22/Solved-Box/refs/heads/main/img/img2.png"  width="500"/>
    </p>
 4. Manually run the workflow for the first time or Update the repository. (The workflow will run every day at 21:00 UTC.)
 5. Pin the newly created Gist
