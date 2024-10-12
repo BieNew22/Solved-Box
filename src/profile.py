@@ -5,8 +5,9 @@ class UserProfile:
     def __init__(self):
         self.tier = ""
         self.rank = ''
-        self.need_rating = 0
-        self.rating = 0
+        self.now_rating = 0         # rating earned at current tier
+        self.need_rating = 0        # rating required to increase tier
+        self.rating = 0             # total rating
         self.solved = ''
         self.streak = ''
         self.classValue = ""
@@ -65,7 +66,7 @@ def get_user_data(id: str) -> UserProfile | None:
     res.arena = num_to_arena_tier(user_data['arenaTier'], user_data['arenaRating']).strip()
 
     res.rating = user_data['rating']
-    res.need_rating = get_need_rating(user_data['tier'])
+    res.need_rating, res.now_rating = get_need_rating(user_data['tier'], res.rating)
 
     return res
 
@@ -107,11 +108,27 @@ def num_to_arena_tier(num, rating):
     return f'{DB[num]} ({rating})'
 
 
-def get_need_rating(tier):
-    DB = [0, 30, 60, 90, 120, 150,
-          200, 300, 400, 500, 650,
-          800, 950, 1100, 1250, 1400, 1600, 1750,
-          1900, 2000, 2100, 2200, 2300, 2400, 2500, 2600,
-          2700, 2800, 2850, 2900, 2950, 3000, 3000]
+def get_need_rating(tier, now_rating):
+    DB = [
+        # Bronze
+        0, 30, 60, 90, 120, 150,
+        # Silver
+        200, 300, 400, 500, 650,
+        # Gold
+        800, 950, 1100, 1250, 1400, 
+        # Platinum
+        1600, 1750, 1900, 2000, 2100, 
+        # Diamond
+        2200, 2300, 2400, 2500, 2600,
+        # Ruby
+        2700, 2800, 2850, 2900, 2950, 
+        # Master
+        3000, 3000]
 
-    return DB[tier + 1]
+    # calc need_rating
+    need_rating = DB[tier + 1] - DB[tier]
+
+    # get now_rating
+    now_rating = now_rating - DB[tier]
+
+    return [need_rating, now_rating]

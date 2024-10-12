@@ -23,7 +23,9 @@ if __name__ == "__main__":
     betweenTxt = " " * 3
     
     rankAndName = f'#{user_data.rank:,} @{user_name}'
-    percent = user_data.rating / user_data.need_rating * 100
+
+    percent = user_data.now_rating / user_data.need_rating * 100
+
     display_percent = f'{round(percent, 1)}% ({user_data.rating:,})'
     graph = make_graph(percent, 15)
 
