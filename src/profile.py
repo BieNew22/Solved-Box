@@ -56,7 +56,7 @@ def get_user_data(id: str) -> UserProfile | None:
     # Extract essential data
     res = UserProfile()
 
-    CLASS_ADD = {'none': '', 'sliver': '+', 'gold': '++'}
+    CLASS_ADD = {'none': '', 'silver': '+', 'gold': '++'}
 
     res.streak = str(nowStreak['currentStreak']).strip()
     res.solved = str(user_data['solvedCount']).strip()
